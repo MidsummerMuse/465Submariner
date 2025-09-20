@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
             gamePaused = !gamePaused;
         }
 
-        // Start the game with spacebar
-        if (gameOver && Input.GetKeyDown(KeyCode.Space))
+        // Start the game with enter
+        if (gameOver && Input.GetKeyDown(KeyCode.Return))
         {
             StartTheGame();
         }

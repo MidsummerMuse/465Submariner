@@ -525,6 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f20b804551a5f4e942d617694c98cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LaserPrefab: {fileID: 7651494081210661754, guid: 330baf797143c154e8622f825bf98ee1, type: 3}
 --- !u!1001 &1670965863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -573,9 +574,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8048524908834707886, guid: 6dab528ea53eeba489429a176c686bf4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048524908834707886, guid: 6dab528ea53eeba489429a176c686bf4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 675506277
+      objectReference: {fileID: 0}
     - target: {fileID: 8048524908834707888, guid: 6dab528ea53eeba489429a176c686bf4, type: 3}
       propertyPath: m_Name
-      value: Blue Idle
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048524908834707888, guid: 6dab528ea53eeba489429a176c686bf4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,0 +1,64 @@
+.gitattributes
+.vsconfig
+465Submariner.sln
+Assembly-CSharp.csproj
+Assets/Scenes.meta
+Assets/Scenes/SampleScene.unity
+Assets/Scenes/SampleScene.unity.meta
+Assets/Scripts.meta
+Assets/Scripts/GameManager.cs
+Assets/Scripts/GameManager.cs.meta
+Assets/Scripts/Player.cs
+Assets/Scripts/Player.cs.meta
+Assets/Scripts/SpawnManager.cs
+Assets/Scripts/SpawnManager.cs.meta
+Assets/Scripts/UIManager.cs
+Assets/Scripts/UIManager.cs.meta
+Assets/Sprites.meta
+Assets/Sprites/UI.meta
+Assets/Sprites/UI/submariner-01.png
+Assets/Sprites/UI/submariner-01.png.meta
+Assets/War.meta
+Assets/War/Slime Enemy - Pixel Art.meta
+Assets/War/Slime Enemy - Pixel Art/Animation.meta
+Assets/War/Slime Enemy - Pixel Art/Animation/Idle.meta
+Assets/War/Slime Enemy - Pixel Art/Animation/Idle/Blue.meta
+Assets/War/Slime Enemy - Pixel Art/Animation/Idle/Blue/Blue Idle - Animation.anim
+Assets/War/Slime Enemy - Pixel Art/Animation/Idle/Blue/Blue Idle - Animation.anim.meta
+Assets/War/Slime Enemy - Pixel Art/Animation/Idle/Blue/Blue Idle - Controller.controller
+Assets/War/Slime Enemy - Pixel Art/Animation/Idle/Blue/Blue Idle - Controller.controller.meta
+Assets/War/Slime Enemy - Pixel Art/Prefabs.meta
+Assets/War/Slime Enemy - Pixel Art/Prefabs/Blue.meta
+Assets/War/Slime Enemy - Pixel Art/Prefabs/Blue/Blue Idle.prefab
+Assets/War/Slime Enemy - Pixel Art/Prefabs/Blue/Blue Idle.prefab.meta
+Assets/War/Slime Enemy - Pixel Art/Sprites.meta
+Assets/War/Slime Enemy - Pixel Art/Sprites/Idle.meta
+Assets/War/Slime Enemy - Pixel Art/Sprites/Idle/Blue.meta
+Assets/War/Slime Enemy - Pixel Art/Sprites/Idle/Blue/Sprite Sheet - Blue Idle.png
+Assets/War/Slime Enemy - Pixel Art/Sprites/Idle/Blue/Sprite Sheet - Blue Idle.png.meta
+Packages/manifest.json
+Packages/packages-lock.json
+ProjectSettings/AudioManager.asset
+ProjectSettings/ClusterInputManager.asset
+ProjectSettings/DynamicsManager.asset
+ProjectSettings/EditorBuildSettings.asset
+ProjectSettings/EditorSettings.asset
+ProjectSettings/GraphicsSettings.asset
+ProjectSettings/InputManager.asset
+ProjectSettings/MemorySettings.asset
+ProjectSettings/NavMeshAreas.asset
+ProjectSettings/NetworkManager.asset
+ProjectSettings/PackageManagerSettings.asset
+ProjectSettings/Physics2DSettings.asset
+ProjectSettings/PresetManager.asset
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/ProjectVersion.txt
+ProjectSettings/QualitySettings.asset
+ProjectSettings/SceneTemplateSettings.json
+ProjectSettings/TagManager.asset
+ProjectSettings/TimeManager.asset
+ProjectSettings/UnityConnectSettings.asset
+ProjectSettings/VFXManager.asset
+ProjectSettings/VersionControlSettings.asset
+ProjectSettings/XRSettings.asset
+Unity.gitignore
