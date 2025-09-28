@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     private float speed = 5.5f;
     private float fireRate = 0.25f; //cooldown
     private float canFire = 0.05f;
+    private float JumpCharges = 3; 
+  
+
+    private bool isJumping;
     public float jump;
     [SerializeField] private GameObject LaserPrefab = null;
     private Rigidbody2D rb;
@@ -29,6 +33,7 @@ public class Player : MonoBehaviour
 
         Lift();
 
+        Propel();
     }
 
     private void Move()
@@ -43,11 +48,22 @@ public class Player : MonoBehaviour
 
     private void Lift()
     {
-      if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && (JumpCharges>0))
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jump)); 
+            rb.AddForce(new Vector2(rb.velocity.x, jump));
+
+            JumpCharges--; 
+          
+        
+
         }
+
+      
+        
+
     }
+
+    
 
     private void Shoot()
     {
@@ -61,6 +77,20 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void Propel()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * speed * 200);
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * speed * 200);
+        }
+    }
+
 
 
 }
