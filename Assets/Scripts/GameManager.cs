@@ -30,8 +30,12 @@ public class GameManager : MonoBehaviour
 
     public void StartTheGame()
     {
-        gameOver = false;  
-        Instantiate(Player, new Vector3(0, 0, 0), Quaternion.identity);
+        gameOver = false;
+        GameObject newPlayer = Instantiate(Player, Vector3.zero, Quaternion.identity);
+
+        // Let the camera follow the spawned player
+        Camera.main.GetComponent<CameraFollow>().SetPlayer(newPlayer.transform);
+
         TitleScreen.SetActive(false);
         StartButton.SetActive(false);
     }
