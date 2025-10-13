@@ -8,7 +8,10 @@ public class Player : MonoBehaviour
     private float speed = 5.5f;
     private float fireRate = 0.25f; //cooldown
     private float canFire = 0.05f;
-    private float JumpCharges = 3; 
+    private float JumpCharges = 3;
+    private float PropelCharges = 3;
+    private float canRecharge = 0.0f;
+    private float rechargeRate = 1.0f; 
   
 
     private bool isJumping;
@@ -52,16 +55,31 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
 
-            JumpCharges--; 
-          
-        
+            JumpCharges--;
+
+            
 
         }
+
+     
 
       
         
 
     }
+
+    public void RechargeJump()
+    {
+        JumpCharges = 3;
+
+    }
+
+    public void RechargePropel()
+    {
+        PropelCharges = 3; 
+    }
+
+    
 
     
 
@@ -80,12 +98,12 @@ public class Player : MonoBehaviour
 
     private void Propel()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.P) && (PropelCharges > 0))
         {
             transform.Translate(Vector3.right * Time.deltaTime * speed * 200);
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.O) && (PropelCharges > 0))
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed * 200);
         }
