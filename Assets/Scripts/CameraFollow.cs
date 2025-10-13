@@ -15,7 +15,13 @@ public class CameraFollow : MonoBehaviour
     {
         if (player == null) return;
 
-        Vector3 desiredPosition = new Vector3(transform.position.x, player.position.y, transform.position.z) + offset;
+        // Only follow Y position (vertical movement)
+        Vector3 desiredPosition = new Vector3(
+            transform.position.x,           // Keep current X
+            player.position.y + offset.y,   // Follow player's Y with offset
+            transform.position.z + offset.z // Keep Z offset (depth)
+        );
+
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
     }
 }

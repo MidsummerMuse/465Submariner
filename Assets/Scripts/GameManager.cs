@@ -5,12 +5,21 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private bool paused = false;
+    private UIManager UI = null;
+
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject TitleScreen;
     [SerializeField] private GameObject StartButton;
 
     public bool gameOver = true;
     public bool gamePaused = false;
+
+    void Start()
+    {
+        UI = FindObjectOfType<UIManager>();
+        StartButton.SetActive(true);
+    }
 
     void Update()
     {
@@ -22,10 +31,11 @@ public class GameManager : MonoBehaviour
         }
 
         // Start the game with enter
-        if (gameOver && Input.GetKeyDown(KeyCode.Return))
-        {
-            StartTheGame();
-        }
+        //if (gameOver && Input.GetKeyDown(KeyCode.Return))
+        //{
+       //     StartTheGame();
+       // }
+
     }
 
     public void StartTheGame()
@@ -33,7 +43,7 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         GameObject newPlayer = Instantiate(Player, Vector3.zero, Quaternion.identity);
 
-        // Let the camera follow the spawned player
+        //camera follow the player
         Camera.main.GetComponent<CameraFollow>().SetPlayer(newPlayer.transform);
 
         TitleScreen.SetActive(false);
