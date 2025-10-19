@@ -11,7 +11,9 @@ public class Player : MonoBehaviour
     private float JumpCharges = 3;
     private float PropelCharges = 3;
     private float canRecharge = 0.0f;
-    private float rechargeRate = 1.0f; 
+    private float rechargeRate = 1.0f;
+    public float keysHeld = 0;
+
   
 
     private bool isJumping;
