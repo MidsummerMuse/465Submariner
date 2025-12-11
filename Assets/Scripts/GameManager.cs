@@ -31,10 +31,12 @@ public class GameManager : MonoBehaviour
         }
 
         // Start the game with enter
-        //if (gameOver && Input.GetKeyDown(KeyCode.Return))
-        //{
-       //     StartTheGame();
-       // }
+        if (gameOver && Input.GetKeyDown(KeyCode.Return))
+        {
+            StartTheGame();
+        }
+        
+
 
     }
 
