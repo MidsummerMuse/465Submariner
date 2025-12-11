@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private float canRecharge = 0.0f;
     private float rechargeRate = 1.0f;
     public float keysHeld = 0;
+    private GameManager GM;
 
   
 
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(0, 0, 0);
 
         rb = GetComponent<Rigidbody2D>();
+
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -109,6 +112,12 @@ public class Player : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed * 200);
         }
+    }
+
+    public void Damage()
+    {
+        Destroy(gameObject);
+        GM.gameOver = true;
     }
 
 
