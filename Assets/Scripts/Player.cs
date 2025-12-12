@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     private float canRecharge = 0.0f;
     private float rechargeRate = 1.0f;
     public float keysHeld = 0;
+    float horizontalInput;
+    float moveSpeed = 5f;
+    bool isFacingRight = true;
     private GameManager GM;
 
   
@@ -25,10 +28,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0, 0, 0);
-
         rb = GetComponent<Rigidbody2D>();
-
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
@@ -42,6 +42,26 @@ public class Player : MonoBehaviour
         Lift();
 
         Propel();
+       
+        horizontalInput = Input.GetAxis("Horizontal");
+
+        FlipSprite();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+    }
+
+    void FlipSprite()
+    {
+        if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
+        }
     }
 
     private void Move()
