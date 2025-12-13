@@ -27,10 +27,11 @@ public class Door : MonoBehaviour
 
 
             Player P = collision.GetComponent<Player>();
-            if (P != null && P.keysHeld == 3)
+            if (P != null && P.keysHeld == 1)
             {
            
                 Destroy(gameObject);
+                P.keysHeld--;
             }
 
 

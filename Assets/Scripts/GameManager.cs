@@ -43,10 +43,10 @@ public class GameManager : MonoBehaviour
     public void StartTheGame()
     {
         gameOver = false;
-        GameObject newPlayer = Instantiate(Player, Vector3.zero, Quaternion.identity);
+        
 
         //camera follow the player
-        Camera.main.GetComponent<CameraFollow>().SetPlayer(newPlayer.transform);
+        
 
         TitleScreen.SetActive(false);
         StartButton.SetActive(false);
