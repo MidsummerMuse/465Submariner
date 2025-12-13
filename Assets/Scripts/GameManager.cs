@@ -51,4 +51,11 @@ public class GameManager : MonoBehaviour
         TitleScreen.SetActive(false);
         StartButton.SetActive(false);
     }
+
+    public void EndTheGame ()
+    {
+        TitleScreen.SetActive(true);
+        StartButton.SetActive(true);
+        gameOver = true;
+    }
 }

@@ -5,10 +5,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private float speed = 5.5f;
-    [SerializeField] private GameObject EnemyBoomPrefab;
+   
     private UIManager UI;
     private GameManager GM;
-    [SerializeField] private AudioClip explosionClip;
+    
     // Start is called before the first frame update
     void Start()
     {
